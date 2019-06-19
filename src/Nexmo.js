@@ -17,6 +17,8 @@ import FilesResource from "./FilesResource";
 import Conversion from "./Conversion";
 import Media from "./Media";
 import Redact from "./Redact";
+import Channel from "./Channel";
+import Dispatch from "./Dispatch";
 import HttpClient from "./HttpClient";
 import NullLogger from "./NullLogger";
 import ConsoleLogger from "./ConsoleLogger";
@@ -90,6 +92,8 @@ class Nexmo {
     this.files = new FilesResource(this.credentials, this.options);
     this.conversion = new Conversion(this.credentials, this.options);
     this.media = new Media(this.credentials, this.options);
+    this.channel = new Channel(this.credentials, this.options);
+    this.dispatch = new Dispatch(this.credentials, this.options);
     this.redact = new Redact(this.credentials, this.options);
 
     /**
